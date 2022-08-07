@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock, Paper, Scissors, Lizard & Spock</title>
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <script src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id='headerDiv'>
+            <img id='mainImg' src="assets/images/all.png" alt = "Main Img">
+            <h2 id='headerText'>Rock, Paper, Scissors, Lizard & Spock</h2>
+        </div>
+    </header>
+    <div id='mainBodyA'>
+        <h4 id='mainBodyHead'>Please Read The Instructions Carefully</h4>
+        <p>
+            - You will be playing against the computer.<br />
+            - You will be provided with five lives.<br />
+            - If all your lives are finished, the game will be over.<br /><br />
+            <strong>The Rule is Simple: </strong><em>"Scissors cuts paper, paper covers rock, rock crushes lizard,
+                lizard poisons Spock,
+                Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock
+                vaporizes rock, and as it always has, rock crushes scissors."</em><br /><br />
+            Good Luck!
+        </p>
+        <button id='getStarted' onclick="GetStarted()">Get Started</button>
+    </div>
+
+    <div id='mainBodyB'>
+        <div id='mainBodyBTable'>
+            <table id='tableA'>
+                <tr>
+                    <th style="width: 50%;">Your Score</th>
+                    <th style="width: 50%;">Computer's Score</th>
+                </tr>
+                <tr>
+                    <td id='yourScore'>0</td>
+                    <td id='compScore'>0</td>
+                </tr>
+            </table>
+            <table id='tableB'>
+                <tr>
+                    <th style="width: 50%;">Your Remaining Lives: </th>
+                    <th style="width: 50%;">Countdown: </th>
+                </tr>
+                <tr>
+                    <td id='lives'>5</td>
+                    <td id='countdown'>5</td>
+                </tr>
+            </table>
+        </div>
+        <div id='mainBodyBGame'>
+            <h3 id='computerID'>Computer</h3>
+            <div id='computerSelection'>
+                <img id='computerImg' src="assets/images/rock.png"  alt = "Comp Img"/>
+            </div>
+            <hr>
+            <div id='userSelection'>
+                <img onclick="Selection('rock')" id='rock' src="assets/images/rock.png"  alt = "Rock Img" />
+                <img onclick="Selection('paper')" id='paper' src="assets/images/paper.png" alt = "Paper Img" />
+                <img onclick="Selection('scissors')" id='scissors' src="assets/images/scissors.png" alt = "Scissors Img" />
+                <img onclick="Selection('lizard')" id='lizard' src="assets/images/lizard.png"  alt = "Lizard Img" />
+                <img onclick="Selection('spock')" id='spock' src="assets/images/spock.png"  alt = "Spock Img" />
+            </div>
+            <h3 id='userID'>You</h3>
+            <div id='buttonDiv'>
+                <button id='start' onclick="Conditional()">Start</button>
+                <button id='reset' onclick="Reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id='footerDiv'>
+            <h4 id='footerText'>All Rights Reserved</h4>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
