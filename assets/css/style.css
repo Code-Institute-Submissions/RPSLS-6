@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+}
+
+#headerDiv {
+    padding-top: 10px;
+    padding-bottom: 1px;
+    background-color: orange;
+    height: 15vh;
+}
+
+#mainImg {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headerText {
+    margin-top: 5px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#mainBodyA {
+    background-color: lightgoldenrodyellow;
+    height: 75vh;
+    padding-top: 10px;
+}
+
+#mainBodyHead {
+    margin-top: 0px;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+#getStarted {
+    background-color: lemonchiffon;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
