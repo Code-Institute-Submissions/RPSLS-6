@@ -1,51 +1,207 @@
-body {
-    margin: 0px;
-}
-
-#headerDiv {
-    padding-top: 10px;
-    padding-bottom: 1px;
-    background-color: orange;
-    height: 15vh;
-}
-
-#mainImg {
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#headerText {
-    margin-top: 5px;
-    text-align: center;
-    color: whitesmoke;
-}
-
-#mainBodyA {
-    background-color: lightgoldenrodyellow;
-    height: 75vh;
-    padding-top: 10px;
-}
-
-#mainBodyHead {
-    margin-top: 0px;
-    text-align: center;
-}
-
-p {
-    text-align: justify;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 14px;
-}
-
-#getStarted {
-    background-color: lemonchiffon;
-    color: black;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-}
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  body {
+      margin: 0px;
+  }
+  
+  #headerDiv {
+      padding-top: 10px;
+      padding-bottom: 1px;
+      background-color: orange;
+      height: 15vh;
+  }
+  
+  #mainImg {
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  #headerText {
+      margin-top: 5px;
+      text-align: center;
+      color: whitesmoke;
+  }
+  
+  #mainBodyA {
+      background-color: lightgoldenrodyellow;
+      height: 75vh;
+      padding-top: 10px;
+  }
+  
+  #mainBodyHead {
+      margin-top: 0px;
+      text-align: center;
+  }
+  
+  p {
+      text-align: justify;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 14px;
+  }
+  
+  #getStarted {
+      background-color: lemonchiffon;
+      color: black;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+  }
+  
+  #footerDiv {
+      padding-top: 10px;
+      padding-bottom: 1px;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      background-color: orange;
+      height: 10vh;
+  }
+  
+  #footerText {
+      margin-top: 5px;
+      text-align: center;
+      color: whitesmoke;
+  }
+  
+  #mainBodyB {
+      display: none;
+      flex-direction: column;
+      background-color: lightgoldenrodyellow;
+      height: 75vh;
+  }
+  
+  #mainBodyBTable {
+      width: 100%;
+      background-color: #ffdab9;
+  }
+  
+  #tableA {
+      background-color: whitesmoke;
+      margin-top: 15px;
+      margin-left: 5%;
+      width: 90%;
+      border: 1px solid black;
+  }
+  
+  #tableB {
+      margin-top: 15px;
+      margin-left: 5%;
+      width: 90%;
+  }
+  
+  td {
+      text-align: center;
+  }
+  
+  #mainBodyBText {
+      margin-left: 5%;
+  }
+  
+  #mainBodyBGame {
+      width: 100%;
+  }
+  
+  #computerID {
+      text-align: center;
+  }
+  
+  #userID {
+      text-align: center;
+  }
+  
+  #computerImg {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60px;
+  }
+  
+  #computerSelection {
+      margin-bottom: 10px;
+  }
+  
+  #userSelection {
+      margin-top: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 380px;
+      padding-top: 3px;
+  }
+  
+  #rock {
+      width: 55px;
+      margin-left: 10px;
+      border-radius: 30px;
+      border: 3px solid red;
+  }
+  
+  #paper {
+      width: 55px;
+      margin-left: 10px;
+      border-radius: 30px;
+      border: 3px solid transparent;
+  }
+  
+  #scissors {
+      width: 55px;
+      margin-left: 10px;
+      border-radius: 30px;
+      border: 3px solid transparent;
+  }
+  
+  #lizard {
+      width: 55px;
+      margin-left: 10px;
+      border-radius: 30px;
+      border: 3px solid transparent;
+  }
+  
+  #spock {
+      width: 55px;
+      margin-left: 10px;
+      border-radius: 30px;
+      border: 3px solid transparent;
+  }
+  
+  #buttonDiv {
+      color: black;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+  }
+  
+  #start {
+      background-color: lemonchiffon;
+      color: black;
+      padding: 10px;
+      margin-right: 20px;
+  }
+  
+  #reset {
+      background-color: lemonchiffon;
+      color: black;
+      padding: 10px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      #mainBodyB {
+          display: none;
+          flex-direction: row;
+      }
+  
+      #mainBodyBTable {
+          width: 30%;
+      }
+  
+      #mainBodyBGame {
+          width: 70%;
+      }
+  }
