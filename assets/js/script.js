@@ -1,3 +1,5 @@
+// Start 
+
 function GetStarted() {
     document.getElementById('mainBodyA').style.display = 'none';
     document.getElementById('mainBodyB').style.display = 'flex';
@@ -17,6 +19,8 @@ var running = 0;
 
 var a, x, y, z;
 
+// Scoring function
+
 function Conditional() {
     if (document.getElementById('lives').innerText == 0) {
         alert('Please reset or refresh the page to try again');
@@ -25,6 +29,8 @@ function Conditional() {
         Start();
     }
 }
+
+// Computer actions on start 
 
 function Start() {
     running = 1;
@@ -50,6 +56,8 @@ function Start() {
         GameLogic();
     }, 5000);
 }
+
+// Game logic begin
 
 function GameLogic() {
     var userVal = selectedOption;
@@ -88,6 +96,10 @@ function GameLogic() {
     running = 0;
 }
 
+// Game logic end
+
+// Reset Button Start
+
 function Reset() {
     clearInterval(x);
     clearInterval(y);
@@ -101,6 +113,10 @@ function Reset() {
     document.getElementById('computerID').innerHTML = `Computer`;
 }
 
+// Reset Button end
+
+// Player selection start
+
 function Selection(item) {
     if (running == 1) {
         document.getElementById('userSelection').getElementsByTagName('img')[0].style.borderColor = 'transparent';
@@ -112,3 +128,5 @@ function Selection(item) {
         selectedOption = item;
     }
 }
+
+// Player selection end
