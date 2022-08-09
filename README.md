@@ -1,108 +1,89 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock, Paper, Scissors, Lizard & Spock Game
 
-Welcome y1999m,
+This is a variation of the traditional rock, paper, scissors game including two more variables - Lizard and Spock!
+This game is inspired by the hit TV show The Big Bang Theory.
+Rules are as follows: "Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors" as explained by Sheldon in The Big Bang Theory.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+My game is only playable against the computer and is not multiplayer. HTML, CSS and Javascript were used in the production of the game. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Responsive design
 
-## Gitpod Reminders
+My website is fully responsive to different screen sizes as will be demonstrated below. 
+I used media-query in CSS to make this possible. At a width of 768px or more, the score counter is stacked to the left of the main game, whilst at a width of less than 768px, the score counter stacks on top of the main game. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Device Dimensions - 1722px x 1046px
 
-`python3 -m http.server`
+![Laptop Size Image](assets/readme/1722x1046.png)
 
-A blue button should appear to click: _Make Public_,
+Device Dimensions - 710px x 1110px
 
-Another blue button should appear to click: _Open Browser_.
+![Tablet Size Image](assets/readme/710%20x%201110.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Device Dimensions - 398px x 902px
 
-A blue button should appear to click: _Make Public_,
+![MobilePhone Size Image](assets/readme/398x%20902.png)
 
-Another blue button should appear to click: _Open Browser_.
+## Features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+This is a single page website, meant only to play the game. 
 
-To log into the Heroku toolbelt CLI:
+The header and footer are purely design based and stay on the page throughout the play of the game.
+The header contains the title of the game, as well as an icon of the game from the [Big Bang Theory Wiki Website](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
+The footer just contins the author name (Yahya Mohammad)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Start Screen
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The start screen entails the rule of the game, the same as explained in the opening of this readme file. 
+Furthermore, it explains how there are 5 lives to play with against the computer.
+Below the rules and conditions of the game, there is a "Get Started" button. Thanks to the use of Javascript, pressing this button begins the game and changes the layout of the page.
 
-------
+### Game Mode
 
-## Release History
+Once the "Get Started" button is pressed, a table with a score counter appears as well as the game play interface. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Score counter
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The score counter shows that the player has 5 lives, and shows the score of the player vs computer. Upon playing the game, this keeps track of the score in real time. It also shows how many lives are remaining. In game play, the table also shows a countdown for user selection before winner/loser of the game is revealed. The aim is to score as highly against the computer as possible within the 5 lives. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### The Game
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The game interface is seperated into computer choice and user choice. Images are used to display the 5 options (Rock, Paper, Scissors, Lizard, Spock) for the user to select from and the rock image is shown on the computer side (to symbolise computer's selection)
+Underneath this, there is a start and reset button.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The start button starts the game and timer. From clicking start, the user has 5 seconds to make their selection by clicking on an image on the user side of the game.This selection will be outlined red. The score table shows this 5 second countdown. 
+Simultaneously, the computer picks it's choice randomly. This is represented by the alternating 5 images on the computer selection during the countdown. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Upon the 5 seconds being up, the computer reveals whether or not the user/ computer won or lost the game. It keeps score of this on the scorer.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+To play again, start must be pressed again.
+The reset button, situated next to the start button, resets the score table and allows a fresh start to the game with 5 lives remaining. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Bugs/ Testing
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Upon testing the game, I discovered that constantly spamming the start button can cause the game to malfunction. The countdown will not stop at 0 seconds and then reveal the winner/loser. Instead, the countdown goes into negative numbers and the winner/loser is not revealed. The webpage must be reloaded to stop this. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+I have not come to a conclusion as to the reason for this bug yet, and am in the process of finding how to resolve this. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Validation 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+HTML - No errors were returned when passing through the official W3C validator
+CSS - No errors were found when passing through the official (Jigsaw) validator
+JS - No errors were found when passing through jshint.com
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Credits/ Sources
 
-------
+All code was written by me. 
+Multiple youtube videos were used to understand the logic behind game making using javascript, but no code was copied. These were used for an understanding of logic only.
+[FreeCodeCamp](https://www.freecodecamp.org/) was used to learn the javascript fundamentals.
 
-## FAQ about the uptime script
+The header picture (all.png) was sourced from https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
+This same picture was seperated into the 5 user choice option pictures (Rock, Paper, Scissors, Lizard, Spock) using the windows paint application and image resizer. The same website also provided the rule of the game. 
 
-**Why have you added this script?**
+## Deployment 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+This website was deployed using Github pages.
 
-**How will this affect me?**
+By Yahya Mohammad. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
